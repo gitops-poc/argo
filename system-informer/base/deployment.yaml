@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: system-informer
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: system-informer
+      labels:
+        app: system-informer
+    spec:
+      containers:
+      - image: ghcr.io/gitops-poc/systeminformer:test
+        name: systeminformer
+  selector:
+    matchLabels:
+      app: system-informer
