@@ -6,11 +6,11 @@ metadata:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded, HookFailed
 spec:
+  backoffLimit: 1
   template:
     metadata:
       name: sequential-job
     spec:
-      backoffLimit: 1
       initContainers:
       - name: job-1
         image: busybox
