@@ -4,6 +4,7 @@ metadata:
   name: sequential-jobs
   annotations:
     argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded, HookFailed
 spec:
   template:
     metadata:
