@@ -6,3 +6,15 @@ resources:
 
 patches:
   - path: deployment.yaml
+
+# replacements:
+#   - source:
+#       kind: Deployment
+#       name: system-informer
+#       fieldPath: spec.template.spec.containers.[name=systeminformer].image
+#     targets:
+#       - select:
+#           name: sequential-jobs
+#           kind: Job
+#         fieldPaths:
+#           - spec.template.spec.initContainers.[name=job-1].args.1
