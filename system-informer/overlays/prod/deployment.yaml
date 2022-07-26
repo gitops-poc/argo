@@ -4,3 +4,10 @@ metadata:
   name: system-informer
 spec:
   replicas: 4
+  template:
+    metadata:
+      name: system-informer
+    spec:
+      containers:
+        - image: ghcr.io/gitops-poc/systeminformer:another
+          name: systeminformer
