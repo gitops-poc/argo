@@ -9,5 +9,5 @@ spec:
       name: system-informer
     spec:
       containers:
-        - image: 'ghcr.io/gitops-poc/system-informer@sha256:5632d0525b06fa1bfc6b10010fd8c415d9d60031d38bbcd14379e50a1d629f68'
+        - image: 'ghcr.io/gitops-poc/system-informer@sha256:ddc6a488f7223a89de802d27e4cb3a65e417401c8404ad63bb9a9e915c2508f3'
           name: systeminformer
