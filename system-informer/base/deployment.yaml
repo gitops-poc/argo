@@ -13,6 +13,12 @@ spec:
       containers:
       - image: ghcr.io/gitops-poc/systeminformer:test
         name: systeminformer
+        resources:
+          limits:
+            memory: 500Mi
+          requests:
+            cpu: 30m
+            memory: 400Mi
   selector:
     matchLabels:
       app: system-informer
